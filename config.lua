@@ -42,3 +42,4 @@
 -- })
 
 -- vim: sw=2 sts=2 ts=2 expandtab
+doom.core.treesitter.settings.show_compiler_warning_message = false
