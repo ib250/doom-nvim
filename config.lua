@@ -42,4 +42,11 @@
 -- })
 
 -- vim: sw=2 sts=2 ts=2 expandtab
-doom.core.treesitter.settings.show_compiler_warning_message = false
+--
+local treesitter_settings = doom.core.treesitter.settings
+treesitter_settings.show_compiler_warning_message = false
+
+local whichkey_settings = doom.modules.features.whichkey.settings
+whichkey_settings.layout.height.max = 15
+
+vim.cmd.colorscheme("doom-nord")

@@ -26,7 +26,7 @@ return {
     "indentlines", -- Show indent lines with special characters
     "range_highlight", -- Highlight selected range from commands
     "todo_comments", -- Highlight TODO: comments
-    -- "doom_themes",     -- Extra themes for doom
+    "doom_themes",     -- Extra themes for doom
 
     -- UI Components
     "lsp_progress", -- Check status of LSP loading
