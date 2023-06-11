@@ -48,6 +48,3 @@ treesitter_settings.show_compiler_warning_message = false
 
 local whichkey_settings = doom.modules.features.whichkey.settings
 whichkey_settings.layout.height.max = 15
-
--- doom-nord
-require('doom-nord.util').load{}
