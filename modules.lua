@@ -58,7 +58,7 @@ return {
   langs = {
     -- Scripts
     "lua",
-    -- "python",
+    "python",
     -- "bash",
     -- "fish",
     -- "gdscript",
@@ -68,30 +68,30 @@ return {
 
     -- Web
     -- "javascript",
-    -- "typescript",
+    "typescript",
     -- "css",
     -- "vue",
     -- "tailwindcss",
     -- "svelte",
 
     -- Compiled
-    -- "rust",
-    -- "cc",
+    "rust",
+    "cc",
     -- "ocaml",
-    -- "haskell",
+    "haskell",
 
     -- JIT
     -- "c_sharp",
     -- "kotlin",
     -- "java",
 
-    -- "json",
-    -- "yaml",
-    -- "toml",
-    -- "markdown",
-    -- "terraform",       -- Terraform / hcl files support
-    -- "dockerfile",
-    -- "nix",             -- Nix declarations
+    "json",
+    "yaml",
+    "toml",
+    "markdown",
+    "terraform",       -- Terraform / hcl files support
+    "dockerfile",
+    "nix",             -- Nix declarations
   },
 }
 
