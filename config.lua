@@ -49,7 +49,7 @@ treesitter_settings.show_compiler_warning_message = false
 local whichkey_settings = doom.modules.features.whichkey.settings
 whichkey_settings.layout.height.max = 15
 
-doom.use_autocmd {
+doom.use_autocmd({
   {
     "BufEnter",
     "*",
@@ -113,4 +113,4 @@ doom.use_autocmd {
       vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
     end,
   },
-}
+})
