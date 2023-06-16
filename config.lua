@@ -48,3 +48,69 @@ treesitter_settings.show_compiler_warning_message = false
 
 local whichkey_settings = doom.modules.features.whichkey.settings
 whichkey_settings.layout.height.max = 15
+
+doom.use_autocmd {
+  {
+    "BufEnter",
+    "*",
+    function()
+      vim.cmd([[silent! lcd %:p:h]])
+    end,
+  },
+  {
+    "FileType",
+    "cpp",
+    function()
+      vim.cmd([[setlocal shiftwidth=4 tabstop=4 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "python",
+    function()
+      vim.cmd([[setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "haskell",
+    function()
+      vim.cmd([[setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "elm",
+    function()
+      vim.cmd([[setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "nix",
+    function()
+      vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "vim",
+    function()
+      vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "matlab",
+    function()
+      vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
+    end,
+  },
+  {
+    "FileType",
+    "yaml",
+    function()
+      vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
+    end,
+  },
+}
