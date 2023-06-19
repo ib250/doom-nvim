@@ -49,12 +49,63 @@ treesitter_settings.show_compiler_warning_message = false
 local whichkey_settings = doom.modules.features.whichkey.settings
 whichkey_settings.layout.height.max = 15
 
+local default_opts = function()
+  vim.opt.nu = true
+  vim.opt.relativenumber = true
+
+  vim.opt.tabstop = 4
+  vim.opt.softtabstop = 4
+  vim.opt.shiftwidth = 4
+  vim.opt.expandtab = true
+
+  vim.opt.smartindent = true
+  vim.opt.wrap = false
+  vim.opt.swapfile = false
+  vim.opt.backup = false
+  vim.opt.undofile = true
+
+  vim.opt.wildmenu = true
+  vim.opt.foldenable = true
+  vim.opt.foldmethod = "indent"
+  vim.opt.foldnestmax = 10
+  vim.opt.encoding = "utf8"
+  vim.opt.foldlevel = 0
+  vim.opt.foldlevelstart = 99
+
+  vim.opt.ruler = true
+  vim.opt.hidden = true
+  vim.opt.autoindent = true
+  vim.opt.expandtab = true
+  vim.opt.backspace = { "indent", "eol", "start" }
+  vim.opt.ignorecase = true
+  vim.opt.smartcase = true
+  vim.opt.hlsearch = true
+  vim.opt.incsearch = true
+  vim.opt.shellslash = true
+  vim.opt.clipboard = "unnamedplus"
+
+  vim.opt.lazyredraw = true
+  vim.opt.cursorline = false
+
+  vim.opt.scrolljump = 5
+  vim.opt.re = 1
+  vim.opt.scrolloff = 3
+  vim.opt.laststatus = 1
+
+  vim.opt.errorbells = false
+  vim.opt.visualbell = false
+
+  vim.opt.completeopt = { "menuone", "menu", "longest" }
+  vim.opt.wildignore = { "*/tmp/*", "*.so", "*.swp", "*.zip" }
+end
+
 doom.use_autocmd({
   {
     "BufEnter",
     "*",
     function()
       vim.cmd([[silent! lcd %:p:h]])
+      default_opts()
     end,
   },
   {
