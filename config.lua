@@ -115,7 +115,7 @@ doom.use_autocmd({
     "FileType",
     "*",
     function()
-        default_opts()
+      default_opts()
     end,
   },
   {
@@ -173,5 +173,15 @@ doom.use_autocmd({
     function()
       vim.cmd([[setlocal shiftwidth=2 tabstop=2 expandtab]])
     end,
+  },
+})
+
+doom.use_keybind({
+  {
+    "<leader>f",
+    name = "+files",
+    {
+      { "g", ":Telescope git_files", name = "Find Git files" },
+    },
   },
 })
