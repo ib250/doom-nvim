@@ -181,7 +181,7 @@ doom.use_keybind({
     "<leader>f",
     name = "+files",
     {
-      { "g", ":Telescope git_files", name = "Find Git files" },
+      { "g", ":Telescope git_files<CR>", name = "Find Git files" },
     },
   },
 })
