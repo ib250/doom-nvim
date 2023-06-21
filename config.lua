@@ -68,12 +68,12 @@ local default_opts = function()
     vim.opt.undofile = true
 
     vim.opt.wildmenu = true
-    vim.opt.foldenable = true
-    vim.opt.foldmethod = "indent"
-    vim.opt.foldnestmax = 10
+
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+    vim.opt.foldenable = false
+
     vim.opt.encoding = "utf8"
-    vim.opt.foldlevel = 0
-    vim.opt.foldlevelstart = 99
 
     vim.opt.ruler = true
     vim.opt.hidden = true
@@ -93,7 +93,6 @@ local default_opts = function()
     vim.opt.scrolljump = 5
     vim.opt.re = 1
     vim.opt.scrolloff = 3
-    vim.opt.laststatus = 1
 
     vim.opt.errorbells = false
     vim.opt.visualbell = false
@@ -114,9 +113,7 @@ doom.use_autocmd({
   {
     "FileType",
     "*",
-    function()
-      default_opts()
-    end,
+    default_opts
   },
   {
     "FileType",
