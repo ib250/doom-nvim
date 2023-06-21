@@ -43,8 +43,22 @@
 
 -- vim: sw=2 sts=2 ts=2 expandtab
 --
-local treesitter_settings = doom.core.treesitter.settings
-treesitter_settings.show_compiler_warning_message = false
+doom.freeze_dependencies = false
+-- doom.use_package {
+--   "nvim-treesitter/nvim-treesitter",
+--   config = function()
+--     local parser_install_dir = vim.fn.stdpath("data") .. "/tree-sitters"
+--     require("nvim-treesitter.configs").setup {
+--       auto_install = true,
+--       parser_install_dir = parser_install_dir,
+--       highlight = {
+--         enable = true,
+--         indent = true,
+--         additional_vim_regex_highlighting = false
+--       }
+--     }
+--   end
+-- }
 
 local whichkey_settings = doom.modules.features.whichkey.settings
 whichkey_settings.layout.height.max = 15
