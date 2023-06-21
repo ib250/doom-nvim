@@ -102,6 +102,7 @@ local default_opts = function()
     vim.opt.clipboard = "unnamedplus"
 
     vim.opt.lazyredraw = true
+    vim.opt.redrawtime = 5000
     vim.opt.cursorline = false
 
     vim.opt.scrolljump = 5
